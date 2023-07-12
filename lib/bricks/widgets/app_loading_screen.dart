@@ -21,7 +21,7 @@ class AppLoadingScreen extends StatelessWidget {
                 level: 7.5,
                 child: Image(
                   image: AssetImage('assets/images/backgrounds/caters_51.png'),
-                  alignment: Alignment.center,
+                  height: double.infinity,
                   fit: BoxFit.cover,
                 )
             ),

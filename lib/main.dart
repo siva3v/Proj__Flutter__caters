@@ -1,3 +1,4 @@
+import 'package:caters/blocks/app_base/app_screen.dart';
 import 'package:caters/blocks/web_base/web_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
           primaryColor: AppTheme.primaryColor,
           primarySwatch: AppTheme().primaryMaterialColor()
       ),
-      home: OrbitWebView(),
+      home: AppScreen(),
     );
   }
 }

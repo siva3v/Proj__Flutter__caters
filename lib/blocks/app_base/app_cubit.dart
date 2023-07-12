@@ -1,12 +1,8 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../shared/auth/auth_event.dart';
+import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
+
 part 'app_state.dart';
 
-class AppCubit extends Cubit<AppState> {
-  AppCubit(AppStates initialState) : super(AppInitial(initialState));
-
-  setAuthEvent(AuthEvent authEvent) { emit(state.copyWith(authEvent: authEvent)); }
-
-  setAppState(AppStates appState) { emit(state.copyWith(appState: appState)); }
-
+class AppCubit extends Cubit<AppStates> {
+  AppCubit() : super(AppStates.loading);
 }

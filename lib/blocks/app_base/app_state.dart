@@ -1,32 +1,7 @@
 part of 'app_cubit.dart';
 
-enum AppStates { loading, credentials, pin, home }
+enum AppStates { loading, login, customer, caterer, staffer }
 
-class AppState {
-  final AppStates appState;
-  final AuthEvent authEvent;
+class AppState {}
 
-  const AppState({
-    required this.appState,
-    required this.authEvent,
-  });
-
-  AppState copyWith({
-    AppStates? appState,
-    AuthEvent? authEvent,
-    bool? spinner
-  }) {
-    return AppState(
-        authEvent: authEvent ?? this.authEvent,
-        appState: appState ?? this.appState
-    );
-  }
-}
-
-class AppInitial extends AppState {
-  @override
-  AppInitial(AppStates initialState) : super(
-      authEvent: AuthEvent.loading,
-      appState: initialState
-  );
-}
+class AppInitial extends AppState {}

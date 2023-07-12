@@ -1,19 +1,14 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class OrbitWebView extends StatefulWidget {
-  const OrbitWebView({super.key,});
+class WebScreen extends StatefulWidget {
+  const WebScreen({super.key,});
 
   @override
-  OrbitWebViewState createState() {
-    return OrbitWebViewState();
-  }
+  WebScreenState createState() => WebScreenState();
 }
 
-class OrbitWebViewState extends State<OrbitWebView> {
+class WebScreenState extends State<WebScreen> {
 
   @override
   void initState() {
