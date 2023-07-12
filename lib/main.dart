@@ -1,3 +1,4 @@
+import 'package:caters/blocks/web_base/web_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -11,7 +12,8 @@ Future<void> main() async {
   //FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: AppTheme.primaryColor, // navigation bar color
+    statusBarColor: Colors.transparent,
+    statusBarIconBrightness: Brightness.dark,
   ));
 
   final getIt = GetIt.instance;
@@ -25,7 +27,6 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
           primaryColor: AppTheme.primaryColor,
           primarySwatch: AppTheme().primaryMaterialColor()
       ),
-      home: LoginScreen(),
+      home: OrbitWebView(),
     );
   }
 }

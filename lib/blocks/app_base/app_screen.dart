@@ -1,4 +1,5 @@
 
+import 'package:caters/bricks/widgets/app_loading_screen.dart';
 import 'package:caters/shared/util/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -29,7 +30,7 @@ class MainApp extends StatelessWidget {
                 home: (() {
                   switch(state.appState) {
 
-                    default: return Container();
+                    default: return const AppLoadingScreen();
                   }
                 }()),
               );
